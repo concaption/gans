@@ -22,6 +22,6 @@ graph TD
     C --> G[Feedback from Discriminator]
     C --> H[Cost Function]
     D --> I[Generates Convincing Fakes]
-    D --> J[Models P of X|Y or P of X]
+    D --> J[Models P of X of Y or P of X]
 
 ```
