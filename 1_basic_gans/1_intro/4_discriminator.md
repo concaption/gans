@@ -25,6 +25,6 @@ graph TD
     E --> J[Uses Cost Function]
     F --> K[Highly Accurate Probabilities]
     
-    G --> L[Calculates P of textfake given X]
+    G --> L[Calculates P of fake given X]
     H --> M[Feedback Improves Generator]
 ```
