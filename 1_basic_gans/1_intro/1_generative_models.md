@@ -12,12 +12,14 @@ The kicker? Discriminative models can be part of generative models. In a GAN, th
 
 We'll be diving deep into GANs in this course. By the end of the week, you'll even have your own GAN sketching out handwritten digits. So, buckle up; it's going to be a fascinating ride.
 
+[![](https://mermaid.ink/img/pako:eNptkTFvwjAQhf-KdXOCcElC46FSCjQLMLQSQ5MOp-QAq4mNHIeWIv57nbSpQKon-773Ts93Zyh0SSBgZ_CwZ8vnXDF3kmyFxV4qYktCo6TasZXTVc0b8_0H9pjNZVMYWUuFVh5pgL_mXjPLUlJk_uGzns-zDRrpsFZYsaS1mlSXxTRskyxutYvrXkl5dKLOW7E12Q9t3huWJuvBsugtT4NFm5t6eh39j6XMH3X_Ag9qMjXK0o3k3LEc7J5qykG4a0lbbCubQ64uToou9MtJFSCsacmD9lCipblEN8waxBarxlUPqF61rgeRe4I4wycIn_N4xEMexfFdGPCIT6cenEBMIj4ahxMeBvd8PAmiOLh48NW34B5QKV3u1c_W-uVdvgFnVI1I?type=png)](https://mermaid.live/edit#pako:eNptkTFvwjAQhf-KdXOCcElC46FSCjQLMLQSQ5MOp-QAq4mNHIeWIv57nbSpQKon-773Ts93Zyh0SSBgZ_CwZ8vnXDF3kmyFxV4qYktCo6TasZXTVc0b8_0H9pjNZVMYWUuFVh5pgL_mXjPLUlJk_uGzns-zDRrpsFZYsaS1mlSXxTRskyxutYvrXkl5dKLOW7E12Q9t3huWJuvBsugtT4NFm5t6eh39j6XMH3X_Ag9qMjXK0o3k3LEc7J5qykG4a0lbbCubQ64uToou9MtJFSCsacmD9lCipblEN8waxBarxlUPqF61rgeRe4I4wycIn_N4xEMexfFdGPCIT6cenEBMIj4ahxMeBvd8PAmiOLh48NW34B5QKV3u1c_W-uVdvgFnVI1I)
+
 ```mermaid
 graph TD
-    A[Machine Learning Models] --> B[Discriminative Models]
+    A[Deep Learning Models] --> B[Discriminative Models]
     A --> C[Generative Models]
-    C --> D[Variational Autoencoders (VAEs)]
-    C --> E[Generative Adversarial Networks (GANs)]
+    C --> D[Variational Autoencoders VAEs]
+    C --> E[Generative Adversarial Networks GANs]
     E --> F[Generator]
     E --> G[Discriminator]
     G -.-> B
