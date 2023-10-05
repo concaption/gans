@@ -1,4 +1,4 @@
-### BCE Cross Function
+### Binary Cross Entropy
 
 So you've probably heard of Binary Cross Entropy (BCE) if you're into GANs. Let's strip away the math jargon and get to why it's a big deal. BCE is like the referee in a game between the generator and the discriminator in a GAN. It tells you how good or bad a prediction is when the options are just real or fake.
 
@@ -14,7 +14,7 @@ And yeah, you're not just doing this for one image. You do it for a bunch, like 
 
 ```mermaid
 graph TD
-    A[Binary Cross Entropy (BCE)] --> B[Components]
+    A[Binary Cross Entropy BCE] --> B[Components]
     A --> C[Usage in GANs]
     A --> D[Interpreting Loss]
     
