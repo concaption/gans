@@ -19,8 +19,8 @@ graph TD
   B --> E[Traditional Classifier]
   B --> F[Narrow Focus: Real or Fake]
   
-  C --> G[Models \( P(\text{fake} | X) \)]
-  C --> H[Models \( P(\text{real} | X) \)]
+  C --> G[Models P\(fake | X\)]
+  C --> H[Models  P\(real | X \)]
   
   D --> I[Degree of Fakeness]
   D --> J[Degree of Realness]
