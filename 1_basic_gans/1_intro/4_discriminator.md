@@ -1,33 +1,30 @@
 
 ### Discriminator
 
-Let's dive right into the world of GANs, focusing today on the discriminator. If you're familiar with classifiers, you're already halfway there. The discriminator is essentially a specialized classifier whose job is to sort the real from the fake.
+The discriminator in GANs is basically a specialized classifier. So, what's a classifier? Think of it as the guy who tells you whether the animal in a photo is a cat, a dog, or something else. It takes in features, like whether the animal purrs or plays with yarn, and gives you probabilities for each class. Early on, it's pretty clueless—equally likely to say cat or dog for a cat picture. But it learns over time to get these probabilities right.
 
-In traditional classifiers, you take in features \( X \), like pixel values or other characteristics, and you aim to output probabilities for different classes. For example, given an image, is it a cat, a dog, or a bird? The model adjusts its internal parameters \( \theta \) to minimize the difference between its predicted labels \( \hat{Y} \) and the actual labels \( Y \). We quantify this difference using a cost function.
+So how does learning happen? Through a cost function. You feed the neural network features $\( X \)$ and labels \( Y \), and it makes predictions \( \hat{Y} \). The aim is to minimize the difference between \( Y \) and \( \hat{Y} \). The network adjusts its internal parameters, called \( \theta \), in the direction that reduces this difference. It's like tuning a guitar; you tweak until the notes sound just right.
 
-Now, let's tie this back to GANs. The discriminator is still a classifier, but it has a narrower focus: it's looking at examples and deciding, "Is this real or fake?" In probabilistic terms, it's modeling \( P(\text{fake} | X) \) or \[P(\text{real} | X) \), depending on how you want to frame it.
+Now, let's pivot to GANs. In GANs, the discriminator is that classifier, but its job is a bit specific. It looks at an example—could be a real painting or a forgery—and decides how real it is. In terms of probabilities, it's gauging \( P(\text{fake} | X) \), where \( X \) are the features of the example. If it thinks an image is 85% fake, that's valuable feedback for the generator to improve its game.
 
-The output of the discriminator serves as a crucial feedback mechanism for the generator. It's not just about labeling an example as real or fake; it's also about indicating the degree of fakeness or realness. For instance, an 85% confidence that an image is fake is a strong signal to the generator that it needs to up its game.
+In summary, the discriminator is doing double duty. It's a classifier that's been trained to sniff out what's real and what's not, and its feedback is crucial for the generator's training. 
 
-To sum it up, the discriminator is the gatekeeper in the GAN setup, operating as a specialized classifier. It refines its understanding of what's real and what's fake and provides invaluable feedback to the generator, all geared towards the production of increasingly convincing fakes.
 ```mermaid
 graph TD
-  A[Discriminator in GANs] --> B[Specialized Classifier]
-  A --> C[Probabilistic Modeling]
-  A --> D[Feedback to Generator]
-  
-  B --> E[Traditional Classifier]
-  B --> F[Narrow Focus: Real or Fake]
-  
-  C --> G[Models P\(fake | X\)]
-  C --> H[Models  P\(real | X \)]
-  
-  D --> I[Degree of Fakeness]
-  D --> J[Degree of Realness]
-  
-  E --> K[Features \( X \)]
-  E --> L[Parameters \( \theta \)]
-  E --> M[Cost Function]
-  
-  F --> N[Binary Classification]
+    A[Discriminator in GANs] --> B[Specialized Classifier]
+    A --> C[Part of GANs]
+    
+    B --> D[Initial State: Clueless]
+    B --> E[Learning Process]
+    B --> F[Final State: Accurate]
+    
+    C --> G[Job: Real vs Fake]
+    C --> H[Feedback Loop with Generator]
+    
+    D --> I[Equal Probabilities for Classes]
+    E --> J[Uses Cost Function]
+    F --> K[Highly Accurate Probabilities]
+    
+    G --> L[Calculates \( P(\text{fake} | X) \)]
+    H --> M[Feedback Improves Generator]
 ```
